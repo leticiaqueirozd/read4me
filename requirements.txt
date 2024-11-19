@@ -4,3 +4,9 @@ torch
 pytesseract
 pdf2image
 gTTS
+werkzeug
+pdfplumber
+python.docx
+googletrans
+tesseract-ocr
+libtesseract-dev
