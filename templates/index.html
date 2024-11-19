@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icon.png" type="image/png">
+    <title>Read4Me</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #282828;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00183b;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #bcbcbc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+            color: #00183b;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #00183b;
+            margin-bottom: 20px;
+            background-color: #e1e1e1;
+            color: #00183b;
+            box-sizing: border-box; 
+        }
+
+        .form-control:focus {
+            border-color: #9E9E9E;
+            outline: none;
+        }
+
+        .btn-submit {
+            background-color: #00183b;
+            color: white;
+            font-size: 1rem;
+            padding: 12px;
+            width: 100%;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #002c6e;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Read4Me</h1>
+    <div class="container">
+        <form action="/process" method="POST" enctype="multipart/form-data">
+            <label for="file" class="form-label">Escolha um arquivo (pdf, jpg, jpeg, png, docx)</label>
+            <input type="file" name="file" class="form-control" required>
+
+            <label for="language" class="form-label">Escolha o idioma do arquivo</label>
+            <select name="language" class="form-control" required>
+                <option value="pt">Português</option>
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+            </select>
+
+            <button type="submit" class="btn-submit">Submeter</button>
+        </form>
+    </div>
+</body>
+</html>
